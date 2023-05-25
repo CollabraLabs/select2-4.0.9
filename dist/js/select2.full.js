@@ -4929,7 +4929,7 @@ S2.define('select2/i18n/en',[],function () {
       return '결과를 가져올 수 없습니다.';
     },
     searching: function () {
-      return '검색 중...;
+      return '검색 중...';
     },
     removeAllItems: function () {
       return 'Remove all items';
