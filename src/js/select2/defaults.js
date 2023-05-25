@@ -35,7 +35,7 @@ define([
   './dropdown/dropdownCss',
   './dropdown/tagsSearchHighlight',
 
-  './i18n/en'
+  './i18n/ko'
 ], function ($,
 
              ResultsList,
@@ -217,7 +217,7 @@ define([
     options.language = this._resolveLanguage(options.language);
 
     // Always fall back to English since it will always be complete
-    options.language.push('en');
+    options.language.push('ko');
 
     var uniqueLanguages = [];
 
