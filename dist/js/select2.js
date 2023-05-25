@@ -4889,56 +4889,42 @@ S2.define('select2/dropdown/tagsSearchHighlight',[
   return TagsSearchHighlight;
 });
 
-S2.define('select2/i18n/en',[],function () {
-  // English
+S2.define('select2/i18n/ko',[],function () {
+  // Korean
   return {
     errorLoading: function () {
-      return 'The results could not be loaded.';
+      return '결과를 불러올 수 없습니다.';
     },
     inputTooLong: function (args) {
       var overChars = args.input.length - args.maximum;
 
-      var message = 'Please delete ' + overChars + ' character';
-
-      if (overChars != 1) {
-        message += 's';
-      }
+      var message = '너무 깁니다. ' + overChars + ' 글자 지워주세요.';
 
       return message;
     },
     inputTooShort: function (args) {
       var remainingChars = args.minimum - args.input.length;
 
-      var message = 'Please enter ' + remainingChars + ' or more characters';
+      var message = '너무 짧습니다. ' + remainingChars + ' 글자 더 입력해주세요.';
 
       return message;
     },
     loadingMore: function () {
-      return 'Loading more results…';
+      return '불러오는 중…';
     },
     maximumSelected: function (args) {
-      var message = 'You can only select ' + args.maximum + ' item';
-
-      if (args.maximum != 1) {
-        message += 's';
-      }
+      var message = '최대 ' + args.maximum + '개까지만 선택 가능합니다.';
 
       return message;
     },
     noResults: function () {
-      return 'No results found';
+      return '결과가 없습니다.';
     },
     searching: function () {
-      return 'Searching…';
+      return '검색 중…';
     },
     removeAllItems: function () {
-      return 'Remove all items';
-    },
-    removeItem: function () {
-      return 'Remove item';
-    },
-    search: function() {
-      return 'Search';
+      return '모든 항목 삭제';
     }
   };
 });
@@ -4980,7 +4966,7 @@ S2.define('select2/defaults',[
   './dropdown/dropdownCss',
   './dropdown/tagsSearchHighlight',
 
-  './i18n/en'
+  './i18n/ko'
 ], function ($,
 
              ResultsList,
@@ -5162,7 +5148,7 @@ S2.define('select2/defaults',[
     options.language = this._resolveLanguage(options.language);
 
     // Always fall back to English since it will always be complete
-    options.language.push('en');
+    options.language.push('ko');
 
     var uniqueLanguages = [];
 
