@@ -4966,7 +4966,7 @@ S2.define('select2/defaults',[
   './dropdown/dropdownCss',
   './dropdown/tagsSearchHighlight',
 
-  './i18n/ko'
+  './i18n/en'
 ], function ($,
 
              ResultsList,
@@ -5148,7 +5148,7 @@ S2.define('select2/defaults',[
     options.language = this._resolveLanguage(options.language);
 
     // Always fall back to English since it will always be complete
-    options.language.push('ko');
+    options.language.push('en');
 
     var uniqueLanguages = [];
 
