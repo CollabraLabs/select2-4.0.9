@@ -4926,7 +4926,7 @@ S2.define('select2/i18n/en',[],function () {
       return message;
     },
     noResults: function () {
-      return '결과거 없습니다.';
+      return '결과가 없습니다.';
     },
     searching: function () {
       return '검색 중...';
